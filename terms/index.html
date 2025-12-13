@@ -3,92 +3,221 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SnapFaX – Podmínky používání</title>
+  <title>SnapFaX – Terms of Use</title>
+
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; line-height:1.55; margin:0; background:#fff; color:#111;}
-    main{max-width: 860px; margin: 40px auto; padding: 0 18px;}
-    h1{font-size:28px; margin:0 0 6px;}
-    .meta{color:#444; margin:0 0 22px;}
-    h2{font-size:18px; margin-top: 26px;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      line-height:1.55;
+      margin:0;
+      background:#fff;
+      color:#111;
+    }
+    main{
+      max-width:860px;
+      margin:40px auto;
+      padding:0 18px;
+    }
+    h1{font-size:28px;margin:0 0 6px;}
+    .meta{color:#444;margin:0 0 22px;}
+    h2{font-size:18px;margin-top:26px;}
     ul{padding-left:20px;}
-    hr{border:0; border-top:1px solid #eee; margin: 28px 0;}
+    hr{border:0;border-top:1px solid #eee;margin:28px 0;}
+    .lang-switch{
+      display:flex;
+      gap:10px;
+      margin-bottom:20px;
+    }
+    .lang-switch button{
+      background:#f2f2f2;
+      border:1px solid #ddd;
+      padding:6px 12px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:14px;
+    }
+    .lang-switch button.active{
+      background:#111;
+      color:#fff;
+      border-color:#111;
+    }
+    .lang{display:none;}
+    .lang.active{display:block;}
   </style>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
 </head>
+
 <body>
 <main>
-  <h1>Podmínky používání aplikace SnapFaX</h1>
-  <p class="meta"><strong>Účinné od:</strong> 13. 12. 2025</p>
 
-  <p>Tyto podmínky používání (dále jen „Podmínky“) upravují pravidla používání mobilní aplikace <strong>SnapFaX</strong> (dále jen „Aplikace“) a vymezují práva a povinnosti mezi provozovatelem aplikace a jejím uživatelem.</p>
-  <p>Používáním Aplikace uživatel potvrzuje, že se s těmito Podmínkami seznámil a souhlasí s nimi.</p>
+  <div class="lang-switch">
+    <button id="btn-cs" class="active" onclick="switchLang('cs')">Čeština</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
 
-  <h2>1. Provozovatel aplikace</h2>
-  <p><strong>Filip Šťastný</strong><br/>
-     fyzická osoba – nepodnikatel<br/>
-     Praha, Česká republika<br/>
-     E-mail: filip.stastny00@gmail.com<br/>
-     (dále jen „Provozovatel“)
-  </p>
+  <!-- =================== CZ =================== -->
+  <div id="cs" class="lang active">
+    <h1>Podmínky používání aplikace SnapFaX</h1>
+    <p class="meta"><strong>Účinné od:</strong> 13. 12. 2025</p>
 
-  <h2>2. Popis služby</h2>
-  <p>SnapFaX je mobilní aplikace pro iOS, která slouží jako průvodce v rozšířené realitě. Pomocí kamery nebo nahraných snímků umožňuje rozpoznávání památek a dalších objektů a zobrazuje informační obsah, zejména historický a kontextový popis.</p>
-  <p>Aplikace je poskytována <strong>bez nutnosti registrace</strong> a bez vytvoření uživatelského účtu.</p>
+    <p>Tyto podmínky používání (dále jen „Podmínky“) upravují pravidla používání mobilní aplikace <strong>SnapFaX</strong> (dále jen „Aplikace“) a vymezují práva a povinnosti mezi provozovatelem aplikace a jejím uživatelem.</p>
+    <p>Používáním Aplikace uživatel potvrzuje, že se s těmito Podmínkami seznámil a souhlasí s nimi.</p>
 
-  <h2>3. Povaha informací a použití umělé inteligence</h2>
-  <p>Aplikace využívá <strong>automatizované systémy a umělou inteligenci</strong> k analýze obrazu a generování informačních textů.</p>
-  <p>Uživatel bere na vědomí, že:</p>
-  <ul>
-    <li>zobrazované informace jsou generované nebo automaticky zpracované,</li>
-    <li>mohou být nepřesné, neúplné nebo neaktuální,</li>
-    <li>slouží výhradně k informačním a orientačním účelům.</li>
-  </ul>
-  <p>Aplikace není oficiálním zdrojem turistických, historických ani odborných informací a nenahrazuje odborné, oficiální nebo ověřené zdroje.</p>
+    <h2>1. Provozovatel aplikace</h2>
+    <p><strong>Filip Šťastný</strong><br/>
+       fyzická osoba – nepodnikatel<br/>
+       Praha, Česká republika<br/>
+       E-mail: filip.stastny00@gmail.com<br/>
+       (dále jen „Provozovatel“)
+    </p>
 
-  <h2>4. Vyloučení odpovědnosti</h2>
-  <p>Provozovatel nenese odpovědnost za:</p>
-  <ul>
-    <li>správnost, úplnost nebo aktuálnost informací zobrazených v Aplikaci,</li>
-    <li>rozhodnutí nebo jednání uživatele učiněná na základě těchto informací,</li>
-    <li>škody vzniklé v důsledku použití nebo nemožnosti použití Aplikace.</li>
-  </ul>
-  <p>Aplikace je poskytována „tak, jak je“, bez jakýchkoli výslovných či implicitních záruk.</p>
+    <h2>2. Popis služby</h2>
+    <p>SnapFaX je mobilní aplikace pro iOS, která slouží jako průvodce v rozšířené realitě. Pomocí kamery nebo nahraných snímků umožňuje rozpoznávání památek a dalších objektů a zobrazuje informační obsah, zejména historický a kontextový popis.</p>
+    <p>Aplikace je poskytována <strong>bez nutnosti registrace</strong> a bez vytvoření uživatelského účtu.</p>
 
-  <h2>5. Dostupnost služby</h2>
-  <p>Provozovatel se snaží zajistit dostupnost Aplikace, avšak nezaručuje nepřetržitý nebo bezchybný provoz. Provozovatel si vyhrazuje právo Aplikaci kdykoli upravit, omezit nebo dočasně pozastavit, a to i bez předchozího upozornění.</p>
+    <h2>3. Povaha informací a použití umělé inteligence</h2>
+    <p>Aplikace využívá <strong>automatizované systémy a umělou inteligenci</strong> k analýze obrazu a generování informačních textů.</p>
+    <p>Uživatel bere na vědomí, že:</p>
+    <ul>
+      <li>zobrazované informace jsou generované nebo automaticky zpracované,</li>
+      <li>mohou být nepřesné, neúplné nebo neaktuální,</li>
+      <li>slouží výhradně k informačním a orientačním účelům.</li>
+    </ul>
+    <p>Aplikace není oficiálním zdrojem turistických, historických ani odborných informací a nenahrazuje odborné, oficiální nebo ověřené zdroje.</p>
 
-  <h2>6. Reklamy a bonusový obsah</h2>
-  <p>Aplikace může obsahovat odměňované reklamy (rewarded ads), jejichž sledováním může uživatel získat bonusové funkce nebo výhody v rámci Aplikace.</p>
-  <p>Uživatel bere na vědomí, že:</p>
-  <ul>
-    <li>bonusy nemají peněžní hodnotu,</li>
-    <li>nejde o nákup služby ani produktu,</li>
-    <li>dostupnost bonusů může být omezená nebo změněna.</li>
-  </ul>
+    <h2>4. Vyloučení odpovědnosti</h2>
+    <p>Provozovatel nenese odpovědnost za:</p>
+    <ul>
+      <li>správnost, úplnost nebo aktuálnost informací zobrazených v Aplikaci,</li>
+      <li>rozhodnutí nebo jednání uživatele učiněná na základě těchto informací,</li>
+      <li>škody vzniklé v důsledku použití nebo nemožnosti použití Aplikace.</li>
+    </ul>
+    <p>Aplikace je poskytována „tak, jak je“, bez jakýchkoli výslovných či implicitních záruk.</p>
 
-  <h2>7. Práva a povinnosti uživatele</h2>
-  <p>Uživatel se zavazuje používat Aplikaci v souladu s právními předpisy a nezasahovat do jejího technického fungování.</p>
-  <p>Uživatel není oprávněn zejména:</p>
-  <ul>
-    <li>pokoušet se o zpětné inženýrství,</li>
-    <li>obcházet technická omezení Aplikace,</li>
-    <li>zneužívat Aplikaci nebo její obsah.</li>
-  </ul>
+    <h2>5. Dostupnost služby</h2>
+    <p>Provozovatel se snaží zajistit dostupnost Aplikace, avšak nezaručuje nepřetržitý nebo bezchybný provoz. Provozovatel si vyhrazuje právo Aplikaci kdykoli upravit, omezit nebo dočasně pozastavit, a to i bez předchozího upozornění.</p>
 
-  <h2>8. Duševní vlastnictví</h2>
-  <p>Veškerý obsah Aplikace, včetně textů, grafiky, rozhraní a databází, je chráněn autorským právem nebo jinými právy duševního vlastnictví.</p>
-  <p>Používáním Aplikace nezískává uživatel žádná práva k tomuto obsahu, s výjimkou práva Aplikaci běžně používat.</p>
+    <h2>6. Reklamy a bonusový obsah</h2>
+    <p>Aplikace může obsahovat odměňované reklamy (rewarded ads), jejichž sledováním může uživatel získat bonusové funkce nebo výhody v rámci Aplikace.</p>
+    <p>Uživatel bere na vědomí, že:</p>
+    <ul>
+      <li>bonusy nemají peněžní hodnotu,</li>
+      <li>nejde o nákup služby ani produktu,</li>
+      <li>dostupnost bonusů může být omezená nebo změněna.</li>
+    </ul>
 
-  <h2>9. Věkové omezení</h2>
-  <p>Aplikace je určena pro uživatele ve věku <strong>13 let a více</strong>. Aplikace není cíleně určena dětem mladším 13 let.</p>
+    <h2>7. Práva a povinnosti uživatele</h2>
+    <p>Uživatel se zavazuje používat Aplikaci v souladu s právními předpisy a nezasahovat do jejího technického fungování.</p>
+    <p>Uživatel není oprávněn zejména:</p>
+    <ul>
+      <li>pokoušet se o zpětné inženýrství,</li>
+      <li>obcházet technická omezení Aplikace,</li>
+      <li>zneužívat Aplikaci nebo její obsah.</li>
+    </ul>
 
-  <h2>10. Odkaz na zásady ochrany soukromí</h2>
-  <p>Podrobné informace o zpracování osobních údajů jsou uvedeny v samostatném dokumentu „Zásady ochrany soukromí“, který je veřejně dostupný.</p>
+    <h2>8. Duševní vlastnictví</h2>
+    <p>Veškerý obsah Aplikace, včetně textů, grafiky, rozhraní a databází, je chráněn autorským právem nebo jinými právy duševního vlastnictví.</p>
+    <p>Používáním Aplikace nezískává uživatel žádná práva k tomuto obsahu, s výjimkou práva Aplikaci běžně používat.</p>
 
-  <h2>11. Změny podmínek</h2>
-  <p>Provozovatel si vyhrazuje právo tyto Podmínky kdykoli změnit nebo aktualizovat. Aktuální znění Podmínek bude vždy zveřejněno a nabývá účinnosti dnem uvedeným v jejich záhlaví.</p>
+    <h2>9. Věkové omezení</h2>
+    <p>Aplikace je určena pro uživatele ve věku <strong>13 let a více</strong>. Aplikace není cíleně určena dětem mladším 13 let.</p>
 
-  <h2>12. Závěrečná ustanovení</h2>
-  <p>Tyto Podmínky se řídí právním řádem České republiky. Případné spory budou řešeny podle platných právních předpisů ČR.</p>
+    <h2>10. Odkaz na zásady ochrany soukromí</h2>
+    <p>Podrobné informace o zpracování osobních údajů jsou uvedeny v samostatném dokumentu „Zásady ochrany soukromí“, který je veřejně dostupný.</p>
+
+    <h2>11. Změny podmínek</h2>
+    <p>Provozovatel si vyhrazuje právo tyto Podmínky kdykoli změnit nebo aktualizovat. Aktuální znění Podmínek bude vždy zveřejněno a nabývá účinnosti dnem uvedeným v jejich záhlaví.</p>
+
+    <h2>12. Závěrečná ustanovení</h2>
+    <p>Tyto Podmínky se řídí právním řádem České republiky. Případné spory budou řešeny podle platných právních předpisů ČR.</p>
+  </div>
+
+  <!-- =================== EN =================== -->
+  <div id="en" class="lang">
+    <h1>Terms of Use of the SnapFaX Application</h1>
+    <p class="meta"><strong>Effective from:</strong> December 13, 2025</p>
+
+    <p>These Terms of Use (hereinafter referred to as the “Terms”) govern the rules for using the <strong>SnapFaX</strong> mobile application (hereinafter referred to as the “Application”) and define the rights and obligations between the operator of the Application and its user.</p>
+    <p>By using the Application, the user confirms that they have read and agree to these Terms.</p>
+
+    <h2>1. Application Operator</h2>
+    <p><strong>Filip Šťastný</strong><br/>
+       natural person – non-entrepreneur<br/>
+       Prague, Czech Republic<br/>
+       E-mail: filip.stastny00@gmail.com<br/>
+       (hereinafter referred to as the “Operator”)
+    </p>
+
+    <h2>2. Service Description</h2>
+    <p>SnapFaX is an iOS mobile application that serves as an augmented reality guide. Using the camera or uploaded images, it enables the recognition of landmarks and other objects and displays informational content, primarily historical and contextual descriptions.</p>
+    <p>The Application is provided <strong>without the need for registration</strong> and without creating a user account.</p>
+
+    <h2>3. Nature of Information and Use of Artificial Intelligence</h2>
+    <p>The Application uses <strong>automated systems and artificial intelligence</strong> to analyze images and generate informational texts.</p>
+    <p>The user acknowledges that:</p>
+    <ul>
+      <li>the displayed information is generated or automatically processed,</li>
+      <li>it may be inaccurate, incomplete, or outdated,</li>
+      <li>it is intended solely for informational and orientation purposes.</li>
+    </ul>
+    <p>The Application is not an official source of tourist, historical, or professional information and does not replace expert, official, or verified sources.</p>
+
+    <h2>4. Disclaimer of Liability</h2>
+    <p>The Operator is not liable for:</p>
+    <ul>
+      <li>the accuracy, completeness, or timeliness of information displayed in the Application,</li>
+      <li>decisions or actions taken by the user based on such information,</li>
+      <li>damages arising from the use of or inability to use the Application.</li>
+    </ul>
+    <p>The Application is provided “as is”, without any express or implied warranties.</p>
+
+    <h2>5. Service Availability</h2>
+    <p>The Operator endeavors to ensure the availability of the Application but does not guarantee uninterrupted or error-free operation. The Operator reserves the right to modify, limit, or temporarily suspend the Application at any time, even without prior notice.</p>
+
+    <h2>6. Advertisements and Bonus Content</h2>
+    <p>The Application may contain rewarded advertisements (rewarded ads), by viewing which the user may obtain bonus features or benefits within the Application.</p>
+    <p>The user acknowledges that:</p>
+    <ul>
+      <li>bonuses have no monetary value,</li>
+      <li>they do not constitute the purchase of a service or product,</li>
+      <li>the availability of bonuses may be limited or changed.</li>
+    </ul>
+
+    <h2>7. User Rights and Obligations</h2>
+    <p>The user agrees to use the Application in accordance with legal regulations and not to interfere with its technical operation.</p>
+    <p>The user is not entitled in particular to:</p>
+    <ul>
+      <li>attempt reverse engineering,</li>
+      <li>bypass technical limitations of the Application,</li>
+      <li>misuse the Application or its content.</li>
+    </ul>
+
+    <h2>8. Intellectual Property</h2>
+    <p>All content of the Application, including texts, graphics, interface, and databases, is protected by copyright or other intellectual property rights.</p>
+    <p>By using the Application, the user does not acquire any rights to this content, except for the right to use the Application in the usual manner.</p>
+
+    <h2>9. Age Restriction</h2>
+    <p>The Application is intended for users aged <strong>13 years and older</strong>. The Application is not specifically intended for children under the age of 13.</p>
+
+    <h2>10. Reference to the Privacy Policy</h2>
+    <p>Detailed information on the processing of personal data is provided in a separate document “Privacy Policy”, which is publicly available.</p>
+
+    <h2>11. Changes to the Terms</h2>
+    <p>The Operator reserves the right to change or update these Terms at any time. The current version of the Terms will always be published and becomes effective on the date stated in its header.</p>
+
+    <h2>12. Final Provisions</h2>
+    <p>These Terms are governed by the legal order of the Czech Republic. Any disputes shall be resolved in accordance with the applicable laws of the Czech Republic.</p>
+  </div>
+
 </main>
 </body>
 </html>
