@@ -21,6 +21,7 @@
     h1{font-size:28px;margin:0 0 6px;}
     .meta{color:#444;margin:0 0 22px;}
     h2{font-size:18px;margin-top:26px;}
+    h3{font-size:16px;margin-top:16px;}
     ul{padding-left:20px;}
     hr{border:0;border-top:1px solid #eee;margin:28px 0;}
     .small{font-size:14px;color:#444;}
@@ -28,6 +29,7 @@
       display:flex;
       gap:10px;
       margin-bottom:20px;
+      flex-wrap:wrap;
     }
     .lang-switch button{
       background:#f2f2f2;
@@ -68,195 +70,255 @@
   <!-- =================== CZ =================== -->
   <div id="cs" class="lang active">
     <h1>Zásady ochrany soukromí aplikace SnapFaX</h1>
-    <p class="meta"><strong>Účinné od:</strong> 13. 12. 2025</p>
+    <p class="meta"><strong>Účinné od:</strong> 24. 12. 2025</p>
 
-    <p>Tyto zásady ochrany soukromí vysvětlují, jakým způsobem aplikace <strong>SnapFaX</strong> (dále jen „Aplikace“) zpracovává osobní údaje a další informace při jejím používání.</p>
-    <p>Cílem je podat srozumitelné a transparentní informace o tom, jaká data jsou zpracovávána, za jakým účelem a jaká práva má uživatel.</p>
-
-    <h2>1. Kdo je správcem údajů</h2>
-    <p>Správcem osobních údajů je:</p>
-    <p><strong>Filip Šťastný</strong><br/>
-       fyzická osoba – nepodnikatel<br/>
-       Praha, Česká republika<br/>
-       E-mail: filip.stastny00@gmail.com<br/>
-       (dále jen „Správce”)
+    <p>
+      Tyto zásady ochrany soukromí vysvětlují, jakým způsobem mobilní aplikace
+      <strong>SnapFaX</strong> (dále jen „Aplikace“) zpracovává osobní údaje
+      a další informace při jejím používání.
     </p>
 
-    <h2>2. O jakou aplikaci se jedná</h2>
-    <p>SnapFaX je mobilní aplikace pro iOS, která funguje jako průvodce v rozšířené realitě. Pomocí kamery rozpoznává památky a další objekty a zobrazuje jejich historický nebo informační kontext. Aplikace využívá umělou inteligenci a veřejně dostupné zdroje dat.</p>
-    <p>Používání aplikace <strong>nevyžaduje registraci ani vytvoření uživatelského účtu</strong>.</p>
+    <h2>1. Správce osobních údajů</h2>
+    <p>
+      <strong>Filip Šťastný</strong><br/>
+      fyzická osoba – nepodnikatel<br/>
+      Praha, Česká republika<br/>
+      E-mail: filip.stastny00@gmail.com<br/>
+      (dále jen „Správce“)
+    </p>
 
-    <h2>3. Jaké údaje aplikace zpracovává</h2>
-    <h2 style="font-size:16px;margin-top:14px;">3.1 Fotky a obrazová data</h2>
-    <p>Aplikace umožňuje pořizovat snímky pomocí kamery nebo nahrát obrázek z galerie zařízení za účelem jejich analýzy.</p>
+    <h2>2. Charakter aplikace</h2>
+    <p>
+      SnapFaX je mobilní aplikace pro iOS, která slouží k rozpoznávání a identifikaci
+      objektů (zejména památek, budov a zajímavých míst) pomocí kamery zařízení
+      a automatizované analýzy obrazu prostřednictvím umělé inteligence.
+    </p>
+    <p>
+      Aplikace nevyžaduje registraci, vytvoření uživatelského účtu ani přihlášení.
+    </p>
+
+    <h2>3. Jaké údaje jsou zpracovávány</h2>
+
+    <h3>3.1 Obrazová data</h3>
     <ul>
-      <li>snímek je zpracován za účelem rozpoznání objektu,</li>
-      <li>snímek může být dočasně odeslán na vzdálený server k analýze pomocí umělé inteligence,</li>
-      <li>snímky nejsou Správcem dlouhodobě ukládány na serveru.</li>
+      <li>uživatel může pořídit fotografii nebo nahrát obrázek z galerie zařízení,</li>
+      <li>obrazová data jsou jednorázově odeslána k analýze pomocí umělé inteligence,</li>
+      <li>Správce obrazová data dlouhodobě neukládá,</li>
+      <li>po dokončení analýzy jsou obrazová data odstraněna.</li>
     </ul>
-    <p>Historie úspěšných skenů je ukládána <strong>pouze lokálně v zařízení uživatele</strong> a může být kdykoli smazána.</p>
+    <p>
+      Do lokální historie zařízení se ukládají pouze textové výsledky rozpoznání,
+      nikoli samotné fotografie.
+    </p>
 
-    <h2 style="font-size:16px;margin-top:14px;">3.2 Poloha zařízení</h2>
-    <p>Aplikace může pracovat s přibližnou polohou zařízení, pokud k tomu uživatel udělí oprávnění.</p>
+    <h3>3.2 Poloha zařízení</h3>
     <ul>
-      <li>přístup k poloze je <strong>zcela volitelný</strong>,</li>
-      <li>poloha je používána pouze při aktivním používání aplikace,</li>
-      <li>slouží k doporučení obsahu v okolí uživatele,</li>
-      <li>poloha není sledována na pozadí ani dlouhodobě ukládána.</li>
+      <li>Aplikace pracuje s <strong>přesnou polohou (GPS)</strong>,</li>
+      <li>poloha je využívána výhradně lokálně v zařízení uživatele,</li>
+      <li>slouží k filtrování obsahu podle vzdálenosti a zobrazení na mapě,</li>
+      <li>poloha není odesílána na server ani třetím stranám,</li>
+      <li>přístup k poloze je <strong>zcela volitelný</strong>.</li>
     </ul>
 
-    <h2 style="font-size:16px;margin-top:14px;">3.3 Technické údaje</h2>
-    <p>Při používání aplikace mohou být technicky zpracovávány běžné provozní údaje, například:</p>
+    <h3>3.3 Technické údaje</h3>
     <ul>
-      <li>typ zařízení,</li>
-      <li>verze operačního systému,</li>
-      <li>IP adresa (v rámci síťové komunikace).</li>
+      <li>typ zařízení a verze operačního systému,</li>
+      <li>IP adresa v rámci síťové komunikace,</li>
+      <li>základní provozní a technická metadata.</li>
     </ul>
-    <p>Tyto údaje jsou zpracovávány pouze v rozsahu nutném pro fungování aplikace a komunikaci se servery třetích stran.</p>
 
-    <h2>4. Umělá inteligence a třetí strany</h2>
-    <p>Aplikace využívá služby třetích stran k analýze obrazu a generování textových informací, zejména:</p>
+    <h2>4. Právní základ zpracování</h2>
     <ul>
-      <li><strong>Cloudflare</strong> – jako technickou proxy,</li>
-      <li><strong>Google (Gemini)</strong> – pro analýzu obrazu a generování popisů.</li>
+      <li>zpracování obrazových dat – plnění smlouvy (poskytnutí funkce Aplikace),</li>
+      <li>zpracování polohy – souhlas uživatele,</li>
+      <li>technické údaje – oprávněný zájem na provozu a zabezpečení Aplikace.</li>
     </ul>
-    <p>Obrazová data a související technické informace mohou být v rámci tohoto procesu <strong>předána mimo Evropskou unii</strong>, zejména do Spojených států amerických.</p>
-    <p>Přenos probíhá pouze za účelem poskytnutí funkčnosti aplikace a v souladu s platnými právními předpisy o ochraně osobních údajů.</p>
 
-    <h2>5. Reklamy</h2>
-    <p>Aplikace zobrazuje <strong>rewarded reklamy</strong> (odměňované reklamy), které umožňují uživateli získat dodatečné funkce nebo bonusy v aplikaci.</p>
+    <h2>5. Umělá inteligence a třetí strany</h2>
+    <p>
+      Aplikace využívá služby třetích stran, zejména:
+    </p>
     <ul>
+      <li><strong>Google Gemini Vision API</strong> – analýza obrazu a generování textu,</li>
+      <li><strong>Cloudflare Workers</strong> – technická proxy,</li>
+      <li><strong>Supabase</strong> – backendová infrastruktura.</li>
+    </ul>
+    <p>
+      Do systému umělé inteligence je odesílán pouze obraz a textový prompt.
+      Informace o poloze nejsou součástí AI dotazů.
+    </p>
+    <p>
+      Data mohou být přenášena mimo Evropskou unii (zejména do USA).
+      Přenos probíhá na základě <strong>standardních smluvních doložek (SCC)</strong>
+      dle čl. 46 GDPR.
+    </p>
+
+    <h2>6. Reklamy</h2>
+    <ul>
+      <li>Aplikace zobrazuje <strong>odměňované reklamy</strong>,</li>
       <li>reklamy jsou poskytovány prostřednictvím služby <strong>Google AdMob</strong>,</li>
-      <li>reklamy jsou zobrazovány v režimu <strong>nepersonalizovaných reklam</strong>,</li>
-      <li>aplikace nevyužívá osobní údaje uživatele k cílení reklam.</li>
+      <li>Aplikace nevyužívá App Tracking Transparency (IDFA),</li>
+      <li>reklamy jsou zobrazovány jako nepersonalizované.</li>
     </ul>
-    <p>Třetí strany mohou v rámci zobrazování reklam zpracovávat omezené technické údaje v souladu se svými zásadami ochrany soukromí.</p>
 
-    <h2>6. Jak dlouho jsou údaje uchovávány</h2>
+    <h2>7. Doba uchování údajů</h2>
     <ul>
-      <li>obrazová data jsou uchovávána pouze po dobu nezbytnou k analýze,</li>
-      <li>historie skenů je uložena lokálně v zařízení uživatele,</li>
-      <li>žádná centrální databáze uživatelských profilů není vedena.</li>
+      <li>obrazová data – pouze po dobu nezbytnou k provedení analýzy,</li>
+      <li>historie skenů – lokálně v zařízení uživatele,</li>
+      <li>Správce nevede centrální databázi uživatelských profilů.</li>
     </ul>
 
-    <h2>7. Práva uživatele</h2>
-    <p>Uživatel má v souladu s GDPR zejména právo:</p>
+    <h2>8. Práva uživatele</h2>
     <ul>
-      <li>na informace o zpracování osobních údajů,</li>
-      <li>na přístup ke svým údajům,</li>
-      <li>na výmaz údajů (v rozsahu, v jakém jsou zpracovávány),</li>
-      <li>vznést námitku proti zpracování,</li>
-      <li>podat stížnost u dozorového úřadu (ÚOOÚ).</li>
+      <li>právo na informace o zpracování údajů,</li>
+      <li>právo na přístup k údajům,</li>
+      <li>právo na výmaz údajů,</li>
+      <li>právo vznést námitku,</li>
+      <li>právo podat stížnost u ÚOOÚ.</li>
     </ul>
 
-    <h2>8. Ochrana dětí</h2>
-    <p>Aplikace není určena pro děti mladší 13 let a necílí na děti jako zvláštní skupinu uživatelů.</p>
+    <h2>9. Ochrana dětí</h2>
+    <p>
+      Aplikace není určena pro děti mladší 13 let.
+    </p>
 
-    <h2>9. Změny těchto zásad</h2>
-    <p>Správce si vyhrazuje právo tyto zásady ochrany soukromí aktualizovat, zejména v případě změn funkčnosti aplikace nebo právních předpisů. Aktuální verze bude vždy dostupná veřejně.</p>
-
-    <h2>10. Kontakt</h2>
-    <p>V případě dotazů ohledně ochrany soukromí se může uživatel obrátit na Správce prostřednictvím e-mailu uvedeného výše.</p>
+    <h2>10. Změny zásad</h2>
+    <p>
+      Správce si vyhrazuje právo tyto zásady kdykoli aktualizovat.
+      Aktuální verze je vždy veřejně dostupná.
+    </p>
 
     <hr/>
-    <p class="small">Tento dokument je určen pro informování uživatelů o zpracování údajů v rámci Aplikace. Nejde o smluvní dokument – smluvní pravidla jsou uvedena v Podmínkách používání.</p>
+    <p class="small">
+      Tento dokument má informační charakter a není smlouvou.
+      Smluvní vztahy upravují Podmínky používání.
+    </p>
   </div>
 
   <!-- =================== EN =================== -->
   <div id="en" class="lang">
     <h1>Privacy Policy of the SnapFaX Application</h1>
-    <p class="meta"><strong>Effective from:</strong> December 13, 2025</p>
+    <p class="meta"><strong>Effective from:</strong> December 24, 2025</p>
 
-    <p>These privacy policy explain how the <strong>SnapFaX</strong> application (hereinafter referred to as the “Application”) processes personal data and other information when it is used.</p>
-    <p>The purpose is to provide clear and transparent information about what data is processed, for what purpose, and what rights the user has.</p>
-
-    <h2>1. Data Controller</h2>
-    <p>The controller of personal data is:</p>
-    <p><strong>Filip Šťastný</strong><br/>
-       natural person – non-entrepreneur<br/>
-       Prague, Czech Republic<br/>
-       E-mail: filip.stastny00@gmail.com<br/>
-       (hereinafter referred to as the “Controller”)
+    <p>
+      This Privacy Policy explains how the <strong>SnapFaX</strong> mobile application
+      (the “Application”) processes personal data and related information when used.
     </p>
 
-    <h2>2. Description of the Application</h2>
-    <p>SnapFaX is an iOS mobile application that functions as an augmented reality guide. Using the camera, it recognizes landmarks and other objects and displays their historical or informational context. The Application uses artificial intelligence and publicly available data sources.</p>
-    <p>Using the Application <strong>does not require registration or the creation of a user account</strong>.</p>
+    <h2>1. Data Controller</h2>
+    <p>
+      <strong>Filip Šťastný</strong><br/>
+      natural person – non-entrepreneur<br/>
+      Prague, Czech Republic<br/>
+      E-mail: filip.stastny00@gmail.com<br/>
+      (the “Controller”)
+    </p>
 
-    <h2>3. What Data the Application Processes</h2>
-    <h2 style="font-size:16px;margin-top:14px;">3.1 Photos and Image Data</h2>
-    <p>The Application allows capturing images using the camera or uploading an image from the device gallery for analysis purposes.</p>
+    <h2>2. Nature of the Application</h2>
+    <p>
+      SnapFaX is an iOS mobile application designed to recognize and identify objects,
+      particularly landmarks, buildings, and points of interest, using the device
+      camera and automated image analysis powered by artificial intelligence.
+    </p>
+    <p>
+      The Application does not require registration or the creation of a user account.
+    </p>
+
+    <h2>3. Data Processed</h2>
+
+    <h3>3.1 Image Data</h3>
     <ul>
-      <li>the image is processed for the purpose of object recognition,</li>
-      <li>the image may be temporarily sent to a remote server for analysis using artificial intelligence,</li>
-      <li>images are not stored long-term on the server by the Controller.</li>
+      <li>users may capture photos or upload images from their device gallery,</li>
+      <li>image data is sent once for analysis using artificial intelligence,</li>
+      <li>the Controller does not store image data long-term,</li>
+      <li>image data is deleted after analysis is completed.</li>
     </ul>
-    <p>The history of successful scans is stored <strong>only locally on the user’s device</strong> and can be deleted at any time.</p>
+    <p>
+      Only text-based recognition results are stored locally on the user’s device.
+    </p>
 
-    <h2 style="font-size:16px;margin-top:14px;">3.2 Device Location</h2>
-    <p>The Application may work with the approximate location of the device if the user grants permission.</p>
+    <h3>3.2 Device Location</h3>
     <ul>
-      <li>access to location is <strong>entirely optional</strong>,</li>
-      <li>location is used only during active use of the Application,</li>
-      <li>it serves to recommend content near the user,</li>
-      <li>location is not tracked in the background or stored long-term.</li>
-    </ul>
-
-    <h2 style="font-size:16px;margin-top:14px;">3.3 Technical Data</h2>
-    <p>When using the Application, common technical operational data may be processed, for example:</p>
-    <ul>
-      <li>device type,</li>
-      <li>operating system version,</li>
-      <li>IP address (within network communication).</li>
-    </ul>
-    <p>This data is processed only to the extent necessary for the operation of the Application and communication with third-party servers.</p>
-
-    <h2>4. Artificial Intelligence and Third Parties</h2>
-    <p>The Application uses third-party services for image analysis and generation of textual information, in particular:</p>
-    <ul>
-      <li><strong>Cloudflare</strong> – as a technical proxy,</li>
-      <li><strong>Google (Gemini)</strong> – for image analysis and description generation.</li>
-    </ul>
-    <p>Image data and related technical information may, within this process, be <strong>transferred outside the European Union</strong>, in particular to the United States of America.</p>
-    <p>The transfer takes place solely for the purpose of providing the Application’s functionality and in accordance with applicable personal data protection laws.</p>
-
-    <h2>5. Advertisements</h2>
-    <p>The Application displays <strong>rewarded advertisements</strong>, which allow the user to obtain additional features or bonuses in the Application.</p>
-    <ul>
-      <li>advertisements are provided through the <strong>Google AdMob</strong> service,</li>
-      <li>advertisements are displayed in <strong>non-personalized advertising</strong> mode,</li>
-      <li>the Application does not use the user’s personal data for ad targeting.</li>
-    </ul>
-    <p>Third parties may process limited technical data in connection with ad display in accordance with their privacy policies.</p>
-
-    <h2>6. Data Retention Period</h2>
-    <ul>
-      <li>image data is retained only for the time necessary for analysis,</li>
-      <li>scan history is stored locally on the user’s device,</li>
-      <li>no central database of user profiles is maintained.</li>
+      <li>the Application uses <strong>precise GPS location</strong>,</li>
+      <li>location data is processed exclusively locally on the device,</li>
+      <li>it is used to filter content by distance and display maps,</li>
+      <li>location data is not transmitted to servers or third parties,</li>
+      <li>granting location access is <strong>entirely optional</strong>.</li>
     </ul>
 
-    <h2>7. User Rights</h2>
-    <p>In accordance with the GDPR, the user has in particular the right:</p>
+    <h3>3.3 Technical Data</h3>
     <ul>
-      <li>to information about the processing of personal data,</li>
-      <li>to access their data,</li>
-      <li>to erasure of data (to the extent it is processed),</li>
-      <li>to object to processing,</li>
-      <li>to lodge a complaint with the supervisory authority.</li>
+      <li>device type and operating system version,</li>
+      <li>IP address within network communication,</li>
+      <li>basic operational and technical metadata.</li>
     </ul>
 
-    <h2>8. Protection of Children</h2>
-    <p>The Application is not intended for children under the age of 13 and does not target children as a specific group of users.</p>
+    <h2>4. Legal Basis for Processing</h2>
+    <ul>
+      <li>image data processing – performance of a contract,</li>
+      <li>location processing – user consent,</li>
+      <li>technical data – legitimate interest in operating and securing the Application.</li>
+    </ul>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>The Controller reserves the right to update these privacy policies, especially in the event of changes to the Application’s functionality or legal regulations. The current version will always be publicly available.</p>
+    <h2>5. Artificial Intelligence and Third Parties</h2>
+    <p>
+      The Application uses third-party services, in particular:
+    </p>
+    <ul>
+      <li><strong>Google Gemini Vision API</strong> – image analysis and text generation,</li>
+      <li><strong>Cloudflare Workers</strong> – technical proxy services,</li>
+      <li><strong>Supabase</strong> – backend infrastructure.</li>
+    </ul>
+    <p>
+      Only image data and a text prompt are transmitted to the AI system.
+      Location data is not included in AI requests.
+    </p>
+    <p>
+      Data may be transferred outside the European Union (in particular to the United States).
+      Such transfers are carried out based on <strong>Standard Contractual Clauses (SCC)</strong>
+      pursuant to Article 46 of the GDPR.
+    </p>
 
-    <h2>10. Contact</h2>
-    <p>If the user has any questions regarding privacy protection, they may contact the Controller via the email address provided above.</p>
+    <h2>6. Advertisements</h2>
+    <ul>
+      <li>the Application displays <strong>rewarded advertisements</strong>,</li>
+      <li>ads are provided via <strong>Google AdMob</strong>,</li>
+      <li>the Application does not use App Tracking Transparency (IDFA),</li>
+      <li>ads are effectively displayed as non-personalized.</li>
+    </ul>
+
+    <h2>7. Data Retention</h2>
+    <ul>
+      <li>image data – retained only for the time necessary to perform analysis,</li>
+      <li>scan history – stored locally on the user’s device,</li>
+      <li>no central user profile database is maintained.</li>
+    </ul>
+
+    <h2>8. User Rights</h2>
+    <ul>
+      <li>right to information about data processing,</li>
+      <li>right of access to personal data,</li>
+      <li>right to erasure of data,</li>
+      <li>right to object to processing,</li>
+      <li>right to lodge a complaint with a supervisory authority.</li>
+    </ul>
+
+    <h2>9. Protection of Children</h2>
+    <p>
+      The Application is not intended for children under the age of 13.
+    </p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>
+      The Controller reserves the right to update this Privacy Policy at any time.
+      The current version will always be publicly available.
+    </p>
 
     <hr/>
-    <p class="small">This document is intended to inform users about data processing within the Application. It is not a contractual document – contractual rules are set out in the Terms of Use.</p>
+    <p class="small">
+      This document is for informational purposes only and does not constitute a contract.
+      Contractual relationships are governed by the Terms of Use.
+    </p>
   </div>
 
 </main>
