@@ -21,6 +21,7 @@
     h1{font-size:28px;margin:0 0 6px;}
     .meta{color:#444;margin:0 0 22px;}
     h2{font-size:18px;margin-top:26px;}
+    h3{font-size:15px;margin-top:18px;}
     ul{padding-left:20px;}
     hr{border:0;border-top:1px solid #eee;margin:28px 0;}
     .lang-switch{
@@ -68,12 +69,13 @@
 <!-- =================== CZ =================== -->
 <div id="cs" class="lang active">
 <h1>Zásady ochrany osobních údajů aplikace SnapFaX</h1>
-<p class="meta"><strong>Účinné od:</strong> 25. 12. 2025 &nbsp;|&nbsp; <strong>Verze:</strong> 1.0.1</p>
+<p class="meta"><strong>Účinné od:</strong> 19. 1. 2026</p>
 
 <p>
-Tyto zásady ochrany osobních údajů (dále jen „Zásady“) popisují,
-jakým způsobem jsou zpracovávány osobní údaje v souvislosti
-s používáním mobilní aplikace <strong>SnapFaX</strong> (dále jen „Aplikace“).
+Tyto zásady ochrany osobních údajů (dále jen „Zásady“) popisují, jakým způsobem jsou zpracovávány osobní údaje
+v souvislosti s používáním mobilní aplikace <strong>SnapFaX</strong> (dále jen „Aplikace“).
+Aplikace je dostupná pro iOS a Android a může být používána <strong>bez uživatelského účtu</strong> (anonymní režim) nebo
+<strong>s uživatelským účtem</strong> (přihlášení přes Apple/Google).
 </p>
 
 <h2>1. Správce osobních údajů</h2>
@@ -85,79 +87,99 @@ E-mail: filip.stastny00@gmail.com<br/>
 (dále jen „Správce“)
 </p>
 
-<h2>2. Rozsah zpracování osobních údajů</h2>
-<p>
-Správce zpracovává pouze minimální rozsah údajů nezbytný
-pro technické fungování Aplikace.
-</p>
+<h2>2. Jaké údaje zpracováváme</h2>
 
-<h3>2.1 Údaje, které jsou zpracovávány</h3>
+<h3>2.1 Údaje v anonymním režimu (bez účtu)</h3>
 <ul>
-<li><strong>GPS souřadnice</strong> – pro zobrazení tipů v okolí a lokalizaci skenů (volitelné),</li>
-<li><strong>technický identifikátor zařízení (device fingerprint)</strong> – pro omezení počtu skenů a prevenci zneužití,</li>
-<li><strong>technické logy proxy</strong> – IP adresa a čas přístupu (uchování max. 24 hodin).</li>
+  <li><strong>Údaje o objevech uložené lokálně v zařízení</strong> (např. historie skenů/objevů) – ukládáno lokálně (AsyncStorage) a může být uživatelem smazáno v zařízení.</li>
+  <li><strong>Přibližné technické údaje nutné pro provoz</strong> (např. typ zařízení/OS) v rámci standardního fungování aplikace a služeb třetích stran.</li>
 </ul>
 
-<h3>2.2 Údaje, které nejsou zpracovávány</h3>
+<h3>2.2 Údaje při používání účtu (přihlášení Apple/Google)</h3>
 <ul>
-<li>jméno a příjmení,</li>
-<li>e-mailová adresa uživatele,</li>
-<li>telefonní číslo,</li>
-<li>platební údaje,</li>
-<li>uživatelské účty nebo profily,</li>
-<li>kontakty v zařízení,</li>
-<li>behaviorální analytika nebo sledování,</li>
-<li>reklamní identifikátory (IDFA).</li>
+  <li><strong>E-mail</strong> (poskytnutý poskytovatelem přihlášení – Apple/Google) – pro vytvoření a správu účtu.</li>
+  <li><strong>Zobrazované jméno</strong> (volitelné) – pokud jej uživatel nastaví.</li>
+  <li><strong>Historie objevů</strong> v účtu (např. název, popis, místo, datum) – pro synchronizaci a zobrazení v rámci Aplikace.</li>
 </ul>
 
-<h2>3. Zpracování fotografií</h2>
+<h3>2.3 Poloha</h3>
+<ul>
+  <li><strong>Přesná poloha zařízení</strong> – pouze pokud uživatel udělí oprávnění; slouží k zobrazení tipů v okolí, mapě a uložení polohy jednotlivých objevů.</li>
+  <li><strong>Neprovádíme kontinuální sledování pohybu</strong> a neukládáme historii pohybu; ukládá se pouze poloha jednotlivých objevů (pokud je funkce používána).</li>
+</ul>
+
+<h3>2.4 Fotografie a obsah z fotoaparátu / galerie</h3>
+<ul>
+  <li><strong>Fotografie</strong> pořízené fotoaparátem nebo vybrané z galerie mohou být odeslány k jednorázové analýze umělou inteligencí (viz čl. 3).</li>
+</ul>
+
+<h3>2.5 Co nezpracováváme</h3>
+<ul>
+  <li>platební údaje (Aplikace neprodává předplatné ani nákupy),</li>
+  <li>kontakty v zařízení,</li>
+  <li>citlivé údaje (zdravotní, biometrické apod.),</li>
+  <li>reklamní identifikátory pro iOS (IDFA) a nežádáme o ATT souhlas,</li>
+  <li>behaviorální analytiku v aplikaci (nepoužíváme Firebase Analytics/Crashlytics ani Sentry).</li>
+</ul>
+
+<h2>3. Zpracování fotografií a umělá inteligence</h2>
 <p>
-Fotografie pořízené uživatelem jsou zpracovány výhradně
-pro účely rozpoznání objektů pomocí umělé inteligence.
+Aplikace umožňuje rozpoznávání památek a generování popisů pomocí umělé inteligence (Google Gemini).
+Pro tento účel může být fotografie (typicky ve formátu base64) odeslána přes technickou proxy vrstvu
+(Cloudflare Workers) k jednorázové analýze.
 </p>
 <p>
-Fotografie nejsou ukládány, archivovány ani dále využívány
-a jsou po zpracování okamžitě odstraněny z paměti.
+<strong>Fotografie nejsou Správcem ukládány</strong> do databáze ani archivovány; slouží pouze k jednorázovému zpracování
+a následně se pracuje pouze s výsledkem (např. textový popis/kategorie). Tipy v okolí jsou kuratovaná statická data;
+Aplikace je nepoužívá pro personalizované doporučování.
 </p>
 
 <h2>4. Účely a právní základy zpracování</h2>
 <ul>
-<li>zajištění funkčnosti Aplikace – <strong>oprávněný zájem</strong>,</li>
-<li>zobrazení obsahu dle polohy – <strong>souhlas uživatele</strong>,</li>
-<li>ochrana proti zneužití – <strong>oprávněný zájem</strong>.</li>
+  <li><strong>Poskytování služby a funkčnosti Aplikace</strong> (např. účet, synchronizace objevů) – <strong>plnění smlouvy</strong> (čl. 6 odst. 1 písm. b GDPR).</li>
+  <li><strong>Funkce založené na poloze</strong> (tipy v okolí, mapa, uložení místa objevu) – <strong>souhlas</strong> udělený v nastavení zařízení (čl. 6 odst. 1 písm. a GDPR).</li>
+  <li><strong>Zajištění bezpečnosti a prevence zneužití</strong> (např. ochrana infrastruktury) – <strong>oprávněný zájem</strong> (čl. 6 odst. 1 písm. f GDPR).</li>
 </ul>
 
-<h2>5. Příjemci osobních údajů a třetí strany</h2>
+<h2>5. Příjemci údajů a služby třetích stran</h2>
 <p>
-Aplikace využívá následující třetí strany:
+Aplikace využívá následující služby třetích stran (v rozsahu nezbytném pro provoz):
 </p>
 <ul>
-<li><strong>Google Gemini AI API</strong> – rozpoznávání obsahu fotografií (USA),</li>
-<li><strong>Supabase (EU)</strong> – databáze veřejných tipů,</li>
-<li><strong>Cloudflare Workers (EU)</strong> – proxy a zabezpečení API,</li>
-<li><strong>Google AdMob</strong> – nepersonalizované odměňované reklamy,</li>
-<li><strong>Apple</strong> – distribuce aplikace a MapKit.</li>
+  <li><strong>Supabase</strong> – autentizace a databáze (uložení údajů účtu a historie objevů pro přihlášené uživatele).</li>
+  <li><strong>Cloudflare Workers</strong> – proxy vrstva pro volání AI API a zabezpečení požadavků.</li>
+  <li><strong>Google Gemini API</strong> – analýza fotografií a generování popisů.</li>
+  <li><strong>Firebase</strong> – využito pouze pro přihlášení přes Google (Google Sign-In).</li>
+  <li><strong>Unity Ads</strong> a <strong>Google AdMob</strong> – odměňované video reklamy (nepersonalizované).</li>
+  <li><strong>Apple</strong> (iOS) / <strong>Google</strong> (Android) – distribuce aplikace a mapové služby (Apple Maps / Google Maps).</li>
 </ul>
 
 <h2>6. Předávání údajů mimo EU</h2>
 <p>
-Některé služby mohou zpracovávat technická data mimo EU,
-zejména v USA. Přenos probíhá na základě standardních
-smluvních doložek nebo obdobných ochranných mechanismů.
+Některé použité služby mohou zpracovávat technická data mimo Evropský hospodářský prostor,
+zejména v souvislosti se službami společnosti Google (Gemini) a distribučními / infrastrukturními službami.
+Přenosy probíhají na základě vhodných ochranných mechanismů, typicky standardních smluvních doložek
+nebo jiných ekvivalentních záruk dle GDPR.
 </p>
 
 <h2>7. Doba uchování údajů</h2>
 <ul>
-<li>lokální data – do smazání uživatelem nebo odinstalace aplikace,</li>
-<li>technické logy – maximálně 24 hodin.</li>
+  <li><strong>Účet a data v Supabase</strong> – uchováváno <strong>do smazání účtu uživatelem</strong>.</li>
+  <li><strong>Lokální data</strong> – do smazání uživatelem nebo odinstalace Aplikace.</li>
 </ul>
 
-<h2>8. Práva subjektu údajů</h2>
+<h2>8. Práva uživatele</h2>
 <ul>
-<li>právo na přístup k údajům,</li>
-<li>právo na výmaz (smazáním historie nebo odinstalací),</li>
-<li>právo odmítnout oprávnění v nastavení zařízení.</li>
+  <li>právo na přístup k osobním údajům,</li>
+  <li>právo na opravu,</li>
+  <li>právo na výmaz (zejména smazáním účtu v Aplikaci),</li>
+  <li>právo na omezení zpracování a vznést námitku (tam, kde je právním základem oprávněný zájem),</li>
+  <li>právo odvolat souhlas (u polohy) v nastavení zařízení,</li>
+  <li>právo podat stížnost u dozorového úřadu.</li>
 </ul>
+<p>
+Žádosti můžete zaslat také e-mailem na adresu Správce uvedenou výše.
+</p>
 
 <h2>9. Dozorový úřad</h2>
 <p>
@@ -169,19 +191,19 @@ Pplk. Sochora 27<br/>
 <h2>10. Změny zásad</h2>
 <p>
 Správce si vyhrazuje právo tyto Zásady aktualizovat.
-O změnách bude uživatel informován v rámci Aplikace.
+O změnách bude uživatel informován v rámci Aplikace nebo prostřednictvím aktualizace.
 </p>
 </div>
 
 <!-- =================== EN =================== -->
 <div id="en" class="lang">
 <h1>Privacy Policy of the SnapFaX Application</h1>
-<p class="meta"><strong>Effective from:</strong> December 25, 2025 &nbsp;|&nbsp; <strong>Version:</strong> 1.0.1</p>
+<p class="meta"><strong>Effective from:</strong> January 19, 2026</p>
 
 <p>
-This Privacy Policy describes how personal data is processed
-in connection with the use of the <strong>SnapFaX</strong> mobile application
-(the “Application”).
+This Privacy Policy explains how personal data is processed in connection with the use of the <strong>SnapFaX</strong>
+mobile application (the “Application”). The Application is available on iOS and Android and may be used
+<strong>without an account</strong> (anonymous mode) or <strong>with an account</strong> (Sign in with Apple / Google Sign-In).
 </p>
 
 <h2>1. Data Controller</h2>
@@ -192,79 +214,98 @@ Prague, Czech Republic<br/>
 E-mail: filip.stastny00@gmail.com
 </p>
 
-<h2>2. Scope of Data Processing</h2>
-<p>
-Only the minimum data necessary for the technical operation
-of the Application is processed.
-</p>
+<h2>2. What Data We Process</h2>
 
-<h3>2.1 Data That Is Processed</h3>
+<h3>2.1 Anonymous mode (no account)</h3>
 <ul>
-<li><strong>GPS coordinates</strong> – to display nearby tips (optional),</li>
-<li><strong>device fingerprint</strong> – for scan limits and abuse prevention,</li>
-<li><strong>proxy technical logs</strong> – IP address and access time (max. 24 hours).</li>
+  <li><strong>Locally stored discoveries/history</strong> (e.g., scan/discovery history) stored on the device (AsyncStorage) and deletable by the user.</li>
+  <li><strong>Limited technical data required for operation</strong> (e.g., device/OS type) as part of standard app and third-party service operation.</li>
 </ul>
 
-<h3>2.2 Data That Is Not Processed</h3>
+<h3>2.2 Account mode (Apple/Google sign-in)</h3>
 <ul>
-<li>name or surname,</li>
-<li>email address,</li>
-<li>phone number,</li>
-<li>payment details,</li>
-<li>user accounts or profiles,</li>
-<li>contacts,</li>
-<li>analytics or tracking,</li>
-<li>advertising identifiers (IDFA).</li>
+  <li><strong>Email address</strong> (provided by Apple/Google) – to create and manage the account.</li>
+  <li><strong>Display name</strong> (optional) – if the user chooses to set it.</li>
+  <li><strong>Discovery history</strong> in the account (e.g., name, description, place, date) – for syncing and display within the Application.</li>
 </ul>
 
-<h2>3. Photo Processing</h2>
+<h3>2.3 Location</h3>
+<ul>
+  <li><strong>Precise device location</strong> – only if permission is granted; used for nearby tips, the map, and saving the location of individual discoveries.</li>
+  <li><strong>We do not continuously track movement</strong> and do not store a movement history; only the location of individual discoveries may be stored (if the feature is used).</li>
+</ul>
+
+<h3>2.4 Photos (camera / gallery)</h3>
+<ul>
+  <li><strong>Photos</strong> taken with the camera or selected from the gallery may be sent for one-time AI analysis (see Section 3).</li>
+</ul>
+
+<h3>2.5 What we do not process</h3>
+<ul>
+  <li>payment data (no subscriptions or purchases are sold),</li>
+  <li>device contacts,</li>
+  <li>sensitive data (health, biometric data, etc.),</li>
+  <li>iOS advertising identifier (IDFA), and we do not request ATT permission,</li>
+  <li>in-app behavioral analytics (we do not use Firebase Analytics/Crashlytics or Sentry).</li>
+</ul>
+
+<h2>3. Photo Processing and Artificial Intelligence</h2>
 <p>
-Photos taken by the user are processed solely for the purpose
-of AI-based object recognition.
+The Application provides landmark recognition and content generation using artificial intelligence (Google Gemini).
+For this purpose, a photo (typically encoded as base64) may be sent via a technical proxy layer
+(Cloudflare Workers) for one-time analysis.
 </p>
 <p>
-Photos are not stored, archived, or reused and are immediately
-discarded after processing.
+<strong>Photos are not stored by the Controller</strong> in a database and are not archived; they are used only for one-time processing.
+Afterwards, only the result (e.g., a generated description/category) is used. Nearby tips are curated static data;
+the Application does not use them for personalized recommendations.
 </p>
 
 <h2>4. Purposes and Legal Bases</h2>
 <ul>
-<li>Application functionality – <strong>legitimate interest</strong>,</li>
-<li>location-based features – <strong>user consent</strong>,</li>
-<li>abuse prevention – <strong>legitimate interest</strong>.</li>
+  <li><strong>Providing the service and core functionality</strong> (e.g., account, syncing discoveries) – <strong>performance of a contract</strong> (GDPR Art. 6(1)(b)).</li>
+  <li><strong>Location-based features</strong> (nearby tips, map, saving discovery location) – <strong>consent</strong> given in device settings (GDPR Art. 6(1)(a)).</li>
+  <li><strong>Security and abuse prevention</strong> (e.g., protecting infrastructure) – <strong>legitimate interest</strong> (GDPR Art. 6(1)(f)).</li>
 </ul>
 
-<h2>5. Recipients and Third Parties</h2>
+<h2>5. Recipients and Third-Party Services</h2>
 <p>
-The Application uses the following third-party services:
+The Application uses the following third-party services (to the extent necessary for operation):
 </p>
 <ul>
-<li><strong>Google Gemini AI API</strong> – image recognition (USA),</li>
-<li><strong>Supabase (EU)</strong> – public tips database,</li>
-<li><strong>Cloudflare Workers (EU)</strong> – API proxy and security,</li>
-<li><strong>Google AdMob</strong> – non-personalized rewarded ads,</li>
-<li><strong>Apple</strong> – application distribution and MapKit.</li>
+  <li><strong>Supabase</strong> – authentication and database (account data and discovery history for signed-in users).</li>
+  <li><strong>Cloudflare Workers</strong> – proxy layer for AI API calls and request security.</li>
+  <li><strong>Google Gemini API</strong> – photo analysis and description generation.</li>
+  <li><strong>Firebase</strong> – used only for Google Sign-In.</li>
+  <li><strong>Unity Ads</strong> and <strong>Google AdMob</strong> – rewarded video ads (non-personalized).</li>
+  <li><strong>Apple</strong> (iOS) / <strong>Google</strong> (Android) – app distribution and map services (Apple Maps / Google Maps).</li>
 </ul>
 
-<h2>6. Data Transfers Outside the EU</h2>
+<h2>6. Transfers Outside the EU/EEA</h2>
 <p>
-Some services may process technical data outside the EU,
-particularly in the United States, based on standard
-contractual clauses or equivalent safeguards.
+Some services may process technical data outside the EU/EEA, particularly in connection with Google services (Gemini)
+and certain infrastructure/distribution services. Transfers are carried out based on appropriate safeguards,
+typically Standard Contractual Clauses or other equivalent mechanisms under GDPR.
 </p>
 
 <h2>7. Data Retention</h2>
 <ul>
-<li>local data – until deleted by the user or app removal,</li>
-<li>technical logs – up to 24 hours.</li>
+  <li><strong>Account and Supabase data</strong> – retained <strong>until the user deletes the account</strong>.</li>
+  <li><strong>Local data</strong> – until deleted by the user or the Application is removed.</li>
 </ul>
 
 <h2>8. User Rights</h2>
 <ul>
-<li>right of access,</li>
-<li>right to erasure (by deleting history or uninstalling),</li>
-<li>right to withdraw permissions in device settings.</li>
+  <li>right of access,</li>
+  <li>right to rectification,</li>
+  <li>right to erasure (especially by deleting the account in the Application),</li>
+  <li>right to restriction and to object (where legitimate interest applies),</li>
+  <li>right to withdraw consent (for location) in device settings,</li>
+  <li>right to lodge a complaint with the supervisory authority.</li>
 </ul>
+<p>
+You may also submit requests via email to the Controller listed above.
+</p>
 
 <h2>9. Supervisory Authority</h2>
 <p>
@@ -276,11 +317,12 @@ Pplk. Sochora 27<br/>
 <h2>10. Changes to This Policy</h2>
 <p>
 The Controller reserves the right to update this Policy.
-Users will be informed of changes within the Application.
+Users will be informed within the Application or via updates.
 </p>
 </div>
 
 </main>
 </body>
 </html>
+
 
